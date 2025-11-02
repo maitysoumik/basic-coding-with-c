@@ -1216,7 +1216,14 @@
               "output": "1"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "section": "File Handling",
+      "icon": "📁",
+      "color": "#0FC17B",
+      "questions": [
         {
           "id": 120,
           "text": "Write a program to take a string input. Change it to sentence case.",
@@ -1234,8 +1241,122 @@
               "output": "We Are Going To Look At 26 Different Test Cases."
             }
           ]
+        },
+        {
+          "id": 121,
+          "text": "Write a C program that creates a text file named info.txt in write mode. The program should take the user’s name and age as input, and write them to the file using fprintf(). After writing, display a message confirming that the data was successfully saved.",
+          "testCases": [
+            {
+              "input": "Name: Rahul, Age: 23",
+              "output": "File created successfully! Data written to info.txt",
+              "explanation": "Expected File Content (info.txt): Name: Rahul Age: 23"
+            }
+          ]
+        },
+        {
+          "id": 122,
+          "text": "Write a C program that opens an existing file (e.g., info.txt) and reads its contents using fgets(). The program should print all the lines to the console until EOF (end of file) is reached.",
+          "testCases": [
+            {
+              "input": "File: info.txt (Content: Name: Rahul\\nAge: 23)",
+              "output": "Name: Rahul\nAge: 23",
+              "explanation": "The program reads each line from info.txt using fgets() and prints it until EOF."
+            }
+          ]
+        },
+        {
+          "id": 123,
+          "text": "Read a text file and count the total number of characters, words, and lines. A word is defined as a sequence of non-space characters separated by spaces or newlines.",
+          "testCases": [
+            {
+              "input": "File: sample.txt (Content: Hello world\\nThis is C programming)",
+              "output": "Characters: 31\nWords: 5\nLines: 2",
+              "explanation": "The file has 31 characters including spaces and newlines, 5 words, and 2 lines."
+            }
+          ]
+        },
+        {
+          "id": 124,
+          "text": "Take two filenames from the user – a source file and a destination file. Copy all the content from the source file to the destination file using fgetc() and fputc().",
+          "testCases": [
+            {
+              "input": "Source File: source.txt (Content: Learning C File Handling)",
+              "output": "File copied successfully to destination.txt",
+              "explanation": "Expected File (destination.txt): Learning C File Handling"
+            }
+          ]
+        },
+        {
+          "id": 125,
+          "text": "Open an existing file in append mode and allow the user to enter a new line of text. Append the text at the end without overwriting existing content.",
+          "testCases": [
+            {
+              "input": "Existing File: data.txt (Content before execution: Hello world)\nUser Input: This is appended text.",
+              "output": "File updated successfully with appended text.",
+              "explanation": "Output File (data.txt after execution): Hello world\\nThis is appended text."
+            }
+          ]
+        },
+        {
+          "id": 126,
+          "text": "Ask the user for a filename. Check if it exists by trying to open it in read mode. If the file pointer is NULL, print an error message; otherwise, read and display its content.",
+          "testCases": [
+            {
+              "input": "Filename: sample.txt (File Exists: Yes)",
+              "output": "File opened successfully.\n(Displays file content)",
+              "explanation": "The program opens the existing file and prints its content using fgets()."
+            },
+            {
+              "input": "Filename: nofile.txt (File Exists: No)",
+              "output": "Error: File does not exist!",
+              "explanation": "Since fopen() returns NULL, an error message is displayed instead of reading."
+            }
+          ]
+        },
+        {
+          "id": 127,
+          "text": "Write a program that reads text from input.txt, converts all lowercase letters to uppercase, and writes the result to output.txt.",
+          "testCases": [
+            {
+              "input": "Input File (input.txt): Hello World\\nC programming",
+              "output": "Output File (output.txt): HELLO WORLD\\nC PROGRAMMING",
+              "explanation": "All lowercase letters in input.txt are converted to uppercase using character manipulation before writing to output.txt."
+            }
+          ]
+        },
+        {
+          "id": 128,
+          "text": "Read a text file and count how many vowels and consonants are in the file. Ignore digits and special characters.",
+          "testCases": [
+            {
+              "input": "File: text.txt (Content: Welcome to C language)",
+              "output": "Vowels: 8\nConsonants: 10",
+              "explanation": "The program iterates through each character, counts vowels (A, E, I, O, U) and consonants, ignoring other symbols."
+            }
+          ]
+        },
+        {
+          "id": 129,
+          "text": "A file numbers.txt contains a list of integers separated by spaces. Read all integers, compute their sum and average, and print both.",
+          "testCases": [
+            {
+              "input": "File: numbers.txt (Content: 10 20 30 40 50)",
+              "output": "Sum = 150\nAverage = 30.00",
+              "explanation": "The program reads integers from the file, computes their total sum (150), and calculates the average (30.00)."
+            }
+          ]
+        },
+        {
+          "id": 130,
+          "text": "Store multiple student records (name, roll number, marks) into a file using fprintf(). Then read them using fscanf() and display each record.",
+          "testCases": [
+            {
+              "input": "Student 1 → Name: Asha, Roll: 101, Marks: 85; Student 2 → Name: Ravi, Roll: 102, Marks: 92",
+              "output": "Name: Asha | Roll: 101 | Marks: 85\nName: Ravi | Roll: 102 | Marks: 92",
+              "explanation": "Expected File Content (students.txt): Asha 101 85\\nRavi 102 92"
+            }
+          ]
         }
-
       ]
     }
   ]
