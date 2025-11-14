@@ -1358,6 +1358,240 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Enum",
+      "icon": "🧱",
+      "color": "#0CF1B7",
+      "questions": [
+        {
+          "id": 131,
+          "text": "Create an enumeration for days (SUNDAY to SATURDAY) and print each day with its integer value.",
+          "testCases": [
+            {
+              "input": "No input",
+              "output": "SUNDAY = 0\nMONDAY = 1\nTUESDAY = 2\nWEDNESDAY = 3\nTHURSDAY = 4\nFRIDAY = 5\nSATURDAY = 6",
+              "explanation": "Each day in the enum is automatically assigned an integer starting from 0."
+            }
+          ]
+        },
+        {
+          "id": 132,
+          "text": "Define an enum for traffic lights (RED, YELLOW, GREEN) and print 'Stop', 'Wait', or 'Go' based on its value.",
+          "testCases": [
+            {
+              "input": "GREEN",
+              "output": "Go",
+              "explanation": "When the enum value is GREEN, the program prints 'Go'."
+            }
+          ]
+        },
+        {
+          "id": 133,
+          "text": "Create an enum for months and print how many days each month has.",
+          "testCases": [
+            {
+              "input": "FEB",
+              "output": "28 or 29 days",
+              "explanation": "February has 28 days in a normal year and 29 in a leap year."
+            }
+          ]
+        },
+        {
+          "id": 134,
+          "text": "Define an enum with SUCCESS, FAILURE, and TIMEOUT, and print messages accordingly.",
+          "testCases": [
+            {
+              "input": "FAILURE",
+              "output": "Operation failed",
+              "explanation": "FAILURE corresponds to a failed operation message."
+            }
+          ]
+        },
+        {
+          "id": 135,
+          "text": "Assign explicit values starting from 10 and print them.",
+          "testCases": [
+            {
+              "input": "No input",
+              "output": "A=10\nB=11\nC=12",
+              "explanation": "Enum values can be explicitly assigned; subsequent values auto-increment."
+            }
+          ]
+        },
+        {
+          "id": 136,
+          "text": "Use enum to represent menu choices (ADD, SUBTRACT, MULTIPLY) and perform operations using switch.",
+          "testCases": [
+            {
+              "input": "ADD 10 20",
+              "output": "30",
+              "explanation": "The enum ADD triggers addition of 10 and 20."
+            }
+          ]
+        },
+        {
+          "id": 137,
+          "text": "Create an enum for user roles (ADMIN, USER, GUEST) and display messages based on role.",
+          "testCases": [
+            {
+              "input": "GUEST",
+              "output": "Welcome Guest!",
+              "explanation": "Enum value determines which message is displayed."
+            }
+          ]
+        },
+        {
+          "id": 138,
+          "text": "Print all enum names and integer values using a loop.",
+          "testCases": [
+            {
+              "input": "No input",
+              "output": "RED=0\nYELLOW=1\nGREEN=2",
+              "explanation": "Iterating through enum values prints each constant with its assigned integer."
+            }
+          ]
+        },
+        {
+          "id": 139,
+          "text": "Show that enums store integers by printing assigned values.",
+          "testCases": [
+            {
+              "input": "No input",
+              "output": "SUCCESS=0, FAILURE=1, TIMEOUT=2",
+              "explanation": "Enum constants are internally stored as integer values starting from 0."
+            }
+          ]
+        },
+        {
+          "id": 140,
+          "text": "Define a struct with enum Gender and print person's gender.",
+          "testCases": [
+            {
+              "input": "Gender=MALE",
+              "output": "Male",
+              "explanation": "The enum inside the struct allows representing gender as a named constant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Enum",
+      "icon": "🧱",
+      "color": "#0CF1B7",
+      "questions": [
+        {
+          "id": 141,
+          "text": "Define a structure Student with name, roll_no, and marks, then read and print one student's data.",
+          "testCases": [
+            {
+              "input": "Name: Asha\nRoll: 101\nMarks: 90",
+              "output": "Name: Asha | Roll: 101 | Marks: 90",
+              "explanation": "The program stores and displays one student's details using structure members."
+            }
+          ]
+        },
+        {
+          "id": 142,
+          "text": "Store details of 5 students in an array of structures and print all.",
+          "testCases": [
+            {
+              "input": "Details of 5 students (Name, Roll, Marks)",
+              "output": "Tabular list of all 5 students with their details",
+              "explanation": "The array of structures stores multiple student records and displays them in a table."
+            }
+          ]
+        },
+        {
+          "id": 143,
+          "text": "Find and print the student with the highest marks.",
+          "testCases": [
+            {
+              "input": "3 students: Ravi 101 95, Sita 102 85, Aman 103 88",
+              "output": "Topper: Ravi (Marks: 95)",
+              "explanation": "Program compares marks of all students and prints the one with the highest."
+            }
+          ]
+        },
+        {
+          "id": 144,
+          "text": "Write a function that accepts a structure as parameter and prints its members.",
+          "testCases": [
+            {
+              "input": "Student: Neha 104 92",
+              "output": "Name: Neha | Roll: 104 | Marks: 92",
+              "explanation": "The structure is passed by value to a function that prints its data."
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "text": "Return a structure containing top student's details from a function.",
+          "testCases": [
+            {
+              "input": "3 students: Riya 101 89, Karan 102 96, Meena 103 92",
+              "output": "Top Student: Karan | Roll: 102 | Marks: 96",
+              "explanation": "The function returns the structure containing the highest scoring student's details."
+            }
+          ]
+        },
+        {
+          "id": 146,
+          "text": "Create Employee structure with nested Date structure for joining date and print details.",
+          "testCases": [
+            {
+              "input": "Employee: Raj | ID: 11 | Joining Date: 12 05 2020",
+              "output": "Name: Raj | ID: 11 | Joining Date: 12/05/2020",
+              "explanation": "Nested structure Date is used inside Employee structure to represent joining date."
+            }
+          ]
+        },
+        {
+          "id": 147,
+          "text": "Store employee data in a binary file using fwrite() and read using fread().",
+          "testCases": [
+            {
+              "input": "Employee details entered and stored in file.",
+              "output": "Displays employee data read from file.",
+              "explanation": "Demonstrates writing and reading structures using binary file handling functions."
+            }
+          ]
+        },
+        {
+          "id": 148,
+          "text": "Take two structs as input and check if they are identical.",
+          "testCases": [
+            {
+              "input": "Student1: Asha 101 90\nStudent2: Asha 101 90",
+              "output": "Same",
+              "explanation": "Compares all structure members and prints 'Same' if identical."
+            }
+          ]
+        },
+        {
+          "id": 149,
+          "text": "Use malloc() to allocate structure memory dynamically and print details.",
+          "testCases": [
+            {
+              "input": "Student allocated dynamically with details: Tina 105 88",
+              "output": "Name: Tina | Roll: 105 | Marks: 88",
+              "explanation": "Memory for structure is dynamically allocated on heap using malloc()."
+            }
+          ]
+        },
+        {
+          "id": 150,
+          "text": "Use pointer to struct to modify and display data using -> operator.",
+          "testCases": [
+            {
+              "input": "Student pointer modifying values: John 106 91",
+              "output": "Modified Data: Name: John | Roll: 106 | Marks: 91",
+              "explanation": "Pointer to structure accesses and modifies data using the arrow (->) operator."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
