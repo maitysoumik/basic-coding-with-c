@@ -285,12 +285,35 @@ function scrollRevealInit() {
   window.addEventListener("resize", revealOnScroll);
   revealOnScroll();
 }
+//toggle dark mode 
+function toggleMode(){
+  const toggleBtn = document.getElementById("modeToggle"); //not actualy a btn 
+  const body = document.body;
+  if(localStorage.getItem('theme') === "dark"){
+    body.classList.add('dark-mode');
 
+  }
+  toggleBtn.addEventListener("click",changeTheme);
+  function changeTheme(){
+    
+    body.classList.toggle('dark-mode');
+    if(body.classList.contains('dark-mode')){
+      localStorage.setItem('theme','dark');
+    }else{
+      localStorage.setItem('theme','light');
+    }
+
+    
+  }
+  
+
+}
 window.onload = async () => {
   try {
     const data = await loadQuestionsData();
     loadQuestions(data);
     scrollRevealInit();
+    toggleMode();
   } catch (error) {
     console.error("Failed to load questions data:", error);
     const container = document.getElementById("question-container");

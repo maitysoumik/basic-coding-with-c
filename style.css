@@ -10,12 +10,25 @@
   --border-radius: 8px;
   --transition-speed: 0.3s;
   --max-content-width: 1200px;
+  --box-shadows:rgba(0, 87, 255, 0.6);
+  --box-shadows-hover:rgba(0, 87, 255, 0.9);
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+body.dark-mode {
+  --primary-color: #4ea8ff;      /* main accent color */
+  --secondary-color: #3390ff;    /* secondary accent */
+  --background-color: #1a1a1a;   /* page background */
+  --text-color: #917979;            /* main text */
+  --light-text-color: #aaa;      /* lighter text */
+  --shadow-color: rgba(0, 0, 0, 0.3); /* shadow for cards */
+  --box-shadows:rgba(252, 160, 38, 0.6);
+  --box-shadows-hover:rgba(252, 160, 38, 0.9);
+
 }
 
 body {
@@ -62,7 +75,7 @@ h1, h2 {
 }
 
 .day-block {
-  background: white;
+  background: var(--background-color);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 12px var(--shadow-color);
   padding: 1.5rem;
@@ -72,7 +85,7 @@ h1, h2 {
 }
 
 .day-block:hover {
-  box-shadow: 0 8px 18px rgba(0, 87, 255, 0.3);
+  box-shadow: 0 8px 18px var(--box-shadows);
   transform: translateY(-5px);
 }
 
@@ -92,12 +105,12 @@ h1, h2 {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
   transition: box-shadow var(--transition-speed), transform var(--transition-speed);
   cursor: default;
-  background-color: white;
+  background-color: var(--background-color);
   will-change: transform;
 }
 
 .question:hover {
-  box-shadow: 0 10px 25px rgba(0, 87, 255, 0.3);
+  box-shadow: 0 10px 25px var(--shadow-color);
   transform: translateY(-6px) scale(1.03);
 }
 
@@ -216,7 +229,7 @@ details > summary {
 
 /* Collapsible instructions specific styling */
 .instructions details {
-  background: white;
+  background: var(--background-color);
   border-radius: var(--border-radius);
   padding: 1.5rem 2rem;
   margin-bottom: 2.5rem;
@@ -278,7 +291,7 @@ details > summary {
 .upes-logo {
   height: 100px; /* Adjust size as needed */
   filter: drop-shadow(0 0 4px rgba(0, 87, 255, 0.7));
-  box-shadow: 0 0 8px rgba(0, 87, 255, 0.6);
+  box-shadow: 0 0 8px var(--box-shadows);
   border-radius: 8px; /* Optional rounded corners */
   transition: filter 0.3s ease, box-shadow 0.3s ease;
   margin: 10px;
@@ -286,7 +299,7 @@ details > summary {
 
 .upes-logo:hover {
   filter: drop-shadow(0 0 6px rgba(0, 87, 255, 0.9));
-  box-shadow: 0 0 12px rgba(0, 87, 255, 0.9);
+  box-shadow: 0 0 12px var(--box-shadows-hover);
 }
 /* Base styling for the #flash div to make it badge-like */
 #flash {
