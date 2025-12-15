@@ -193,7 +193,7 @@ function getQuestionsForDay(dayIdx, phaseOne, phaseTwo, phaseOneDays) {
 
 function loadQuestions(data) {
   const today = new Date();
-  const startDate = new Date(2025, 7, 21); // Month is 0-indexed: 7 = August
+  const startDate = new Date(2025, 8, 21); // Month is 0-indexed: 7 = August
   let diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
 
   const TOTAL_DAYS = 100;
