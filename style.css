@@ -13,10 +13,8 @@
   --primary: #5b4dff;
   --primary-dark: #4235e0;
   --primary-soft: #efedff;
-
   --accent: #ff7a59;
   --accent-soft: #fff1ec;
-
   --success: #17a673;
 
   --shadow-sm: 0 2px 8px rgba(23, 26, 43, 0.06);
@@ -28,7 +26,6 @@
   --radius-lg: 22px;
 
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-
   --max-content-width: 1180px;
 
   color-scheme: light;
@@ -59,7 +56,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ---------- Decorative Ambient Glows ---------- */
+/* ---------- Decorative ambient glows behind everything ---------- */
 
 .bg-glow {
   position: fixed;
@@ -96,7 +93,7 @@ body {
   );
 }
 
-/* ---------- Custom Scrollbar ---------- */
+/* ---------- Custom scrollbar ---------- */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -115,12 +112,12 @@ body {
   background: var(--primary);
 }
 
-/* ---------- Main Container ---------- */
+/* ---------- Main container ---------- */
 
 .container {
   max-width: var(--max-content-width);
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 5rem;
+  padding: 1.25rem 1.5rem 5rem;
   position: relative;
   z-index: 1;
 }
@@ -134,12 +131,239 @@ h2 {
   letter-spacing: -0.01em;
 }
 
-/* ---------- Header / Hero ---------- */
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+
+.navbar {
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 0.45rem 0.55rem 0.45rem 1rem;
+  margin-bottom: 1.25rem;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  box-shadow: var(--shadow-sm);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  position: relative;
+  z-index: 10;
+}
+
+/* Navbar brand */
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  color: var(--ink-soft);
+
+  white-space: nowrap;
+}
+
+.nav-brand-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  box-shadow:
+    0 0 0 4px var(--primary-soft),
+    0 0 12px rgba(91, 77, 255, 0.35);
+}
+
+/* Navbar links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.45rem 0.75rem;
+
+  border-radius: 9px;
+
+  color: var(--ink-soft);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+}
+
+/* ---------- Exercism Navbar Item ---------- */
+
+.nav-link--exercism {
+  color: var(--primary-dark);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(91, 77, 255, 0.09),
+      rgba(255, 122, 89, 0.09)
+    );
+
+  border: 1px solid rgba(91, 77, 255, 0.12);
+
+  overflow: visible;
+}
+
+.nav-link--exercism:hover {
+  color: var(--primary-dark);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(91, 77, 255, 0.15),
+      rgba(255, 122, 89, 0.15)
+    );
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 16px rgba(91, 77, 255, 0.14),
+    0 2px 8px rgba(255, 122, 89, 0.08);
+}
+
+/* Spark */
+
+.exercism-spark {
+  color: var(--accent);
+
+  font-size: 0.95rem;
+  line-height: 1;
+
+  animation: exercism-spark 1.8s ease-in-out infinite;
+}
+
+@keyframes exercism-spark {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(8deg);
+    opacity: 1;
+  }
+}
+
+/* Exercism name */
+
+.exercism-name {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  letter-spacing: -0.01em;
+}
+
+/* Practice badge */
+
+.exercism-badge {
+  position: absolute;
+
+  top: -9px;
+  right: -6px;
+
+  padding: 0.12rem 0.42rem;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+
+  color: #fff;
+
+  font-size: 0.53rem;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  line-height: 1.3;
+
+  box-shadow:
+    0 3px 8px rgba(255, 122, 89, 0.3);
+
+  animation: practice-badge 2.4s ease-in-out infinite;
+}
+
+@keyframes practice-badge {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+/* External link icon */
+
+.external-icon {
+  font-size: 0.75rem;
+
+  opacity: 0.65;
+
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.nav-link--exercism:hover .external-icon {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+/* ==========================================================
+   HEADER / HERO
+   ========================================================== */
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   gap: 2rem;
 
   background: linear-gradient(
@@ -150,6 +374,7 @@ h2 {
   );
 
   border-radius: var(--radius-lg);
+
   padding: 2.5rem 2.75rem;
 
   box-shadow: var(--shadow-lg);
@@ -162,6 +387,7 @@ h2 {
 
 .header-container::before {
   content: "";
+
   position: absolute;
   inset: 0;
 
@@ -183,6 +409,7 @@ h2 {
 .brand {
   position: relative;
   z-index: 1;
+
   max-width: 640px;
 }
 
@@ -194,9 +421,11 @@ h2 {
   padding: 0.3rem 0.85rem;
 
   font-size: 0.72rem;
+
   font-weight: 700;
 
   letter-spacing: 0.12em;
+
   text-transform: uppercase;
 
   color: #fff;
@@ -262,7 +491,9 @@ h2 {
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.3);
 }
 
-/* ---------- Instructions ---------- */
+/* ==========================================================
+   INSTRUCTIONS
+   ========================================================== */
 
 .instructions details {
   background: var(--surface);
@@ -372,222 +603,9 @@ h2 {
   border-color: var(--primary);
 }
 
-/* ---------- Exercism Practice Reference ---------- */
-
-.practice-reference {
-  position: relative;
-
-  margin: -0.5rem 0 1.75rem;
-
-  padding: 1px;
-
-  border-radius: var(--radius-md);
-
-  /*
-   * Animated purple → orange border
-   * Keeps it connected to the existing site palette.
-   */
-  background: linear-gradient(
-    110deg,
-    var(--primary),
-    #8a7fff,
-    var(--accent),
-    var(--primary)
-  );
-
-  background-size: 300% 100%;
-
-  animation: practice-border 5s ease infinite;
-
-  box-shadow:
-    0 6px 20px rgba(91, 77, 255, 0.12),
-    0 2px 8px rgba(255, 122, 89, 0.06);
-}
-
-.practice-content {
-  display: flex;
-
-  align-items: center;
-
-  gap: 0.9rem;
-
-  background: var(--surface);
-
-  border-radius: calc(var(--radius-md) - 1px);
-
-  padding: 0.85rem 1.1rem;
-}
-
-/* ---------- Lightning Icon ---------- */
-
-.practice-icon {
-  flex-shrink: 0;
-
-  width: 2.25rem;
-  height: 2.25rem;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 10px;
-
-  background: linear-gradient(
-    135deg,
-    var(--primary-soft),
-    var(--accent-soft)
-  );
-
-  font-size: 1.15rem;
-
-  animation: practice-pulse 2s ease-in-out infinite;
-}
-
-/* ---------- Practice Text ---------- */
-
-.practice-text {
-  display: flex;
-
-  align-items: baseline;
-
-  gap: 0.45rem;
-
-  min-width: 0;
-
-  flex: 1;
-}
-
-.practice-label {
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: 0.9rem;
-
-  font-weight: 700;
-
-  color: var(--ink);
-
-  white-space: nowrap;
-}
-
-.practice-description {
-  color: var(--ink-soft);
-
-  font-size: 0.88rem;
-}
-
-/* ---------- Exercism Link ---------- */
-
-.exercism-link {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 0.15rem;
-
-  color: var(--primary-dark);
-
-  font-weight: 700;
-
-  text-decoration: none;
-
-  padding: 0.15rem 0.5rem;
-
-  margin-left: 0.15rem;
-
-  border-radius: 6px;
-
-  background: var(--primary-soft);
-
-  transition:
-    background var(--transition),
-    color var(--transition),
-    transform var(--transition),
-    box-shadow var(--transition);
-}
-
-.exercism-link:hover {
-  color: #fff;
-
-  background: var(--primary);
-
-  transform: translateY(-1px);
-
-  box-shadow: 0 5px 12px rgba(91, 77, 255, 0.25);
-}
-
-.external-icon {
-  font-size: 0.8rem;
-
-  line-height: 1;
-}
-
-/* ---------- Explore Button ---------- */
-
-.practice-badge {
-  flex-shrink: 0;
-
-  padding: 0.3rem 0.7rem;
-
-  border-radius: 999px;
-
-  background: var(--accent-soft);
-
-  color: #c94e32;
-
-  font-size: 0.7rem;
-
-  font-weight: 700;
-
-  letter-spacing: 0.03em;
-
-  text-decoration: none;
-
-  transition:
-    background var(--transition),
-    color var(--transition),
-    transform var(--transition),
-    box-shadow var(--transition);
-}
-
-.practice-badge:hover {
-  background: var(--accent);
-
-  color: #fff;
-
-  transform: translateX(2px);
-
-  box-shadow: 0 6px 14px rgba(255, 122, 89, 0.25);
-}
-
-/* ---------- Exercism Animations ---------- */
-
-@keyframes practice-border {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes practice-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.08);
-  }
-}
-
-/* ---------- Copy Button ---------- */
+/* ==========================================================
+   COPY BUTTON
+   ========================================================== */
 
 .copy-btn {
   background: var(--primary-soft);
@@ -630,7 +648,9 @@ h2 {
   transform: translateY(0) scale(0.96);
 }
 
-/* ---------- Flashing Badge ---------- */
+/* ==========================================================
+   FLASHING BADGE
+   ========================================================== */
 
 #flash {
   display: inline-block;
@@ -688,7 +708,9 @@ h2 {
   transform: scale(1.08);
 }
 
-/* ---------- Question Feed ---------- */
+/* ==========================================================
+   QUESTION FEED
+   ========================================================== */
 
 .question-container {
   display: flex;
@@ -725,7 +747,7 @@ h2 {
   border-color: #d8dcf7;
 }
 
-/* ---------- Today's Block ---------- */
+/* Today's block */
 
 .question-container > .day-block:first-of-type {
   border: 1px solid rgba(91, 77, 255, 0.35);
@@ -783,7 +805,7 @@ h2 {
   border-radius: 999px;
 }
 
-/* ---------- Day Block Layout ---------- */
+/* Questions */
 
 .day-block {
   display: flex;
@@ -803,7 +825,7 @@ h2 {
   }
 }
 
-/* ---------- Question Card ---------- */
+/* Question card */
 
 .question {
   border-radius: var(--radius-md);
@@ -924,7 +946,7 @@ h2 {
   font-family: "Inter", sans-serif;
 }
 
-/* ---------- Test Cases ---------- */
+/* Test cases */
 
 .testcases {
   border-top: 1px dashed rgba(23, 26, 43, 0.12);
@@ -1008,7 +1030,7 @@ h2 {
   font-size: 0.82rem;
 }
 
-/* ---------- Video Link ---------- */
+/* Video link */
 
 .video-link {
   display: inline-flex;
@@ -1052,7 +1074,7 @@ h2 {
   box-shadow: 0 10px 22px rgba(255, 122, 89, 0.35);
 }
 
-/* ---------- Notes ---------- */
+/* Notes */
 
 .notes {
   margin-top: 0.9rem;
@@ -1084,7 +1106,9 @@ h2 {
   font-style: normal;
 }
 
-/* ---------- Scroll Reveal ---------- */
+/* ==========================================================
+   SCROLL REVEAL
+   ========================================================== */
 
 .scroll-reveal {
   opacity: 0;
@@ -1102,9 +1126,53 @@ h2 {
   transform: translateY(0);
 }
 
-/* ---------- Responsive ---------- */
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
 
 @media (max-width: 720px) {
+  .container {
+    padding: 0.75rem 1rem 4rem;
+  }
+
+  /* Navbar */
+
+  .navbar {
+    min-height: 54px;
+
+    padding: 0.4rem 0.45rem 0.4rem 0.8rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .nav-brand {
+    font-size: 0.72rem;
+  }
+
+  .nav-link {
+    padding: 0.42rem 0.55rem;
+
+    font-size: 0.7rem;
+  }
+
+  .nav-link:not(.nav-link--exercism) {
+    display: none;
+  }
+
+  .exercism-name {
+    font-size: 0.75rem;
+  }
+
+  .exercism-badge {
+    display: none;
+  }
+
+  .external-icon {
+    font-size: 0.7rem;
+  }
+
+  /* Header */
+
   .header-container {
     flex-direction: column;
 
@@ -1119,38 +1187,16 @@ h2 {
     height: 68px;
   }
 
+  /* Instructions */
+
   .instructions details {
     padding: 1.25rem 1.4rem;
   }
 
+  /* Questions */
+
   .day-block {
     padding: 1.35rem;
-  }
-
-  /* Exercism */
-
-  .practice-content {
-    align-items: flex-start;
-
-    padding: 0.8rem 0.9rem;
-  }
-
-  .practice-text {
-    display: block;
-  }
-
-  .practice-label {
-    display: block;
-
-    margin-bottom: 0.15rem;
-  }
-
-  .practice-description {
-    font-size: 0.82rem;
-  }
-
-  .practice-badge {
-    display: none;
   }
 }
 
