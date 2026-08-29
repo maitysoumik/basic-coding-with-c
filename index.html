@@ -17,9 +17,44 @@
     <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
 
     <main class="container">
-      <header>
-        <!-- ---------- Hero Header ---------- -->
 
+      <!-- ==================== NAVBAR ==================== -->
+
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-brand">
+          <span class="nav-brand-dot"></span>
+          <span>100 Days of Code</span>
+        </div>
+
+        <div class="nav-links">
+          <a href="#question-container" class="nav-link">
+            Daily Challenges
+          </a>
+
+          <a
+            href="https://exercism.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-link nav-link--exercism"
+          >
+            <span class="exercism-spark">✦</span>
+
+            <span class="exercism-name">
+              Exercism
+            </span>
+
+            <span class="exercism-badge">
+              Practice
+            </span>
+
+            <span class="external-icon">↗</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ==================== HEADER ==================== -->
+
+      <header>
         <div class="header-container">
           <img
             src="upes-logo.jpeg"
@@ -43,7 +78,7 @@
           </div>
         </div>
 
-        <!-- ---------- Student Instructions ---------- -->
+        <!-- ==================== STUDENT INSTRUCTIONS ==================== -->
 
         <section class="instructions">
           <details>
@@ -89,51 +124,7 @@
           </details>
         </section>
 
-        <!-- ---------- Exercism Reference ---------- -->
-
-        <section
-          class="practice-reference"
-          aria-label="Additional coding practice"
-        >
-          <div class="practice-content">
-
-            <div class="practice-icon" aria-hidden="true">
-              ⚡
-            </div>
-
-            <div class="practice-text">
-              <span class="practice-label">
-                Want more practice?
-              </span>
-
-              <span class="practice-description">
-                Try additional coding exercises on
-
-                <a
-                  href="https://exercism.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="exercism-link"
-                >
-                  Exercism
-                  <span class="external-icon">↗</span>
-                </a>
-              </span>
-            </div>
-
-            <a
-              href="https://exercism.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="practice-badge"
-            >
-              Explore →
-            </a>
-
-          </div>
-        </section>
-
-        <!-- ---------- Daily Questions ---------- -->
+        <!-- ==================== QUESTIONS ==================== -->
 
         <section
           id="question-container"
