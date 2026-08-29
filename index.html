@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>100 Days of Code — UPES</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="bg-glow bg-glow--one" aria-hidden="true"></div>
     <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
@@ -15,10 +18,21 @@
     <main class="container">
       <header>
         <div class="header-container">
-          <img src="upes-logo.jpeg" alt="UPES Logo" class="upes-logo" />
+          <img
+            src="upes-logo.jpeg"
+            alt="UPES Logo"
+            class="upes-logo"
+          />
+
           <div class="brand">
             <p class="eyebrow">100 Days of Code</p>
-            <h1>Daily Challenge <span class="accent-dot">•</span> UPES</h1>
+
+            <h1>
+              Daily Challenge
+              <span class="accent-dot">•</span>
+              UPES
+            </h1>
+
             <p class="subtitle">
               Two problems a day for the first 50 days, one a day after that —
               show up, solve, ship.
@@ -28,35 +42,70 @@
 
         <section class="instructions">
           <details>
-            <summary><h2>📝 Student Instructions</h2></summary>
+            <summary>
+              <h2>📝 Student Instructions</h2>
+            </summary>
+
             <ol>
               <li>
                 Copy the question statement by clicking the
-                <button aria-label="Copy Question Statement" class="copy-btn">
+                <button
+                  aria-label="Copy Question Statement"
+                  class="copy-btn"
+                >
                   📋
                 </button>
                 icon next to the question.
               </li>
-              <li>Paste it as a comment at the top of your program.</li>
-              <li>Write your code below the comment.</li>
+
+              <li>
+                Paste it as a comment at the top of your program.
+              </li>
+
+              <li>
+                Write your code below the comment.
+              </li>
+
               <li>
                 Run your code on the provided
-                <strong>Sample Test Cases</strong> and verify the output.
+                <strong>Sample Test Cases</strong>
+                and verify the output.
               </li>
+
               <li>
                 Push the verified solution to your
                 <strong>GitHub repository</strong>.
               </li>
-              <li>Your GitHub account will be checked on a weekly basis.</li>
+
+              <li>
+                Your GitHub account will be checked on a weekly basis.
+              </li>
+
+              <li class="reference-item">
+                For additional coding practice, you may use
+                <a
+                  href="https://exercism.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="reference-link"
+                >
+                  Exercism
+                </a>
+                to practise programming exercises in your chosen language.
+              </li>
             </ol>
           </details>
         </section>
 
-        <section id="question-container" class="question-container">
+        <section
+          id="question-container"
+          class="question-container"
+        >
           <!-- Questions will be dynamically loaded here -->
         </section>
       </header>
     </main>
+
     <script src="script2.js" defer></script>
   </body>
 </html>
