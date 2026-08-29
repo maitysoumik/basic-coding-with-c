@@ -13,8 +13,10 @@
   --primary: #5b4dff;
   --primary-dark: #4235e0;
   --primary-soft: #efedff;
+
   --accent: #ff7a59;
   --accent-soft: #fff1ec;
+
   --success: #17a673;
 
   --shadow-sm: 0 2px 8px rgba(23, 26, 43, 0.06);
@@ -26,6 +28,7 @@
   --radius-lg: 22px;
 
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
   --max-content-width: 1180px;
 
   color-scheme: light;
@@ -56,7 +59,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Decorative ambient glows behind everything */
+/* ---------- Decorative Ambient Glows ---------- */
+
 .bg-glow {
   position: fixed;
   z-index: 0;
@@ -71,6 +75,7 @@ body {
   height: 520px;
   top: -220px;
   right: -160px;
+
   background: radial-gradient(
     circle,
     rgba(91, 77, 255, 0.35),
@@ -83,6 +88,7 @@ body {
   height: 480px;
   bottom: -200px;
   left: -180px;
+
   background: radial-gradient(
     circle,
     rgba(255, 122, 89, 0.22),
@@ -90,7 +96,8 @@ body {
   );
 }
 
-/* Custom scrollbar */
+/* ---------- Custom Scrollbar ---------- */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -107,6 +114,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* ---------- Main Container ---------- */
 
 .container {
   max-width: var(--max-content-width);
@@ -125,23 +134,28 @@ h2 {
   letter-spacing: -0.01em;
 }
 
-/* ---------- Header / hero ---------- */
+/* ---------- Header / Hero ---------- */
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+
   background: linear-gradient(
     135deg,
     #211a5e 0%,
     #4235e0 55%,
     #6f5bff 100%
   );
+
   border-radius: var(--radius-lg);
   padding: 2.5rem 2.75rem;
+
   box-shadow: var(--shadow-lg);
+
   margin-bottom: 1.75rem;
+
   position: relative;
   overflow: hidden;
 }
@@ -150,6 +164,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
+
   background-image:
     radial-gradient(
       circle at 85% 15%,
@@ -161,6 +176,7 @@ h2 {
       rgba(255, 122, 89, 0.25),
       transparent 40%
     );
+
   pointer-events: none;
 }
 
@@ -172,22 +188,33 @@ h2 {
 
 .eyebrow {
   display: inline-block;
+
   margin: 0 0 0.6rem;
+
   padding: 0.3rem 0.85rem;
+
   font-size: 0.72rem;
   font-weight: 700;
+
   letter-spacing: 0.12em;
   text-transform: uppercase;
+
   color: #fff;
+
   background: rgba(255, 255, 255, 0.14);
+
   border: 1px solid rgba(255, 255, 255, 0.25);
+
   border-radius: 999px;
+
   backdrop-filter: blur(6px);
 }
 
 .header-container h1 {
   color: #fff;
+
   font-size: clamp(1.7rem, 3vw, 2.4rem);
+
   margin-bottom: 0.6rem;
 }
 
@@ -197,22 +224,33 @@ h2 {
 
 .subtitle {
   margin: 0;
+
   color: rgba(255, 255, 255, 0.82);
+
   font-size: 1rem;
+
   max-width: 46ch;
 }
 
 .upes-logo {
   height: 92px;
   width: auto;
+
   object-fit: contain;
+
   background: #fff;
+
   padding: 10px;
+
   border-radius: var(--radius-md);
+
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+
   position: relative;
   z-index: 1;
+
   flex-shrink: 0;
+
   transition:
     transform var(--transition),
     box-shadow var(--transition);
@@ -220,6 +258,7 @@ h2 {
 
 .upes-logo:hover {
   transform: translateY(-4px) scale(1.03);
+
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.3);
 }
 
@@ -227,14 +266,23 @@ h2 {
 
 .instructions details {
   background: var(--surface);
+
   border: 1px solid var(--border);
+
   border-radius: var(--radius-md);
+
   padding: 1.5rem 2rem;
+
   margin-bottom: 2rem;
+
   box-shadow: var(--shadow-sm);
+
   color: var(--ink);
+
   line-height: 1.55;
+
   font-size: 1rem;
+
   transition: box-shadow var(--transition);
 }
 
@@ -244,17 +292,25 @@ h2 {
 
 .instructions summary {
   cursor: pointer;
+
   list-style: none;
+
   outline-offset: 2px;
+
   user-select: none;
+
   padding-bottom: 0.25rem;
 }
 
 .instructions summary h2 {
   display: inline-flex;
+
   align-items: center;
+
   gap: 0.5rem;
+
   font-size: 1.25rem;
+
   color: var(--ink);
 }
 
@@ -268,11 +324,17 @@ h2 {
 
 .instructions summary::after {
   content: "▶";
+
   display: inline-block;
+
   margin-left: 0.6rem;
+
   font-size: 0.75rem;
+
   transform: rotate(0deg);
+
   transition: transform 0.25s ease;
+
   color: var(--primary);
 }
 
@@ -282,20 +344,27 @@ h2 {
 
 .instructions ol {
   margin-top: 1.1rem;
+
   padding-left: 1.4rem;
 }
 
 .instructions li {
   margin-bottom: 0.8rem;
+
   line-height: 1.5;
+
   color: var(--ink-soft);
 }
 
 .instructions li a {
   color: var(--primary);
+
   font-weight: 600;
+
   text-decoration: none;
+
   border-bottom: 1px solid transparent;
+
   transition: border-color var(--transition);
 }
 
@@ -303,64 +372,257 @@ h2 {
   border-color: var(--primary);
 }
 
-/* ---------- Exercism Reference ---------- */
+/* ---------- Exercism Practice Reference ---------- */
 
-.instructions .reference-item {
-  margin-top: 1rem;
+.practice-reference {
+  position: relative;
+
+  margin: -0.5rem 0 1.75rem;
+
+  padding: 1px;
+
+  border-radius: var(--radius-md);
+
+  /*
+   * Animated purple → orange border
+   * Keeps it connected to the existing site palette.
+   */
+  background: linear-gradient(
+    110deg,
+    var(--primary),
+    #8a7fff,
+    var(--accent),
+    var(--primary)
+  );
+
+  background-size: 300% 100%;
+
+  animation: practice-border 5s ease infinite;
+
+  box-shadow:
+    0 6px 20px rgba(91, 77, 255, 0.12),
+    0 2px 8px rgba(255, 122, 89, 0.06);
 }
 
-.instructions .reference-link {
-  display: inline-flex;
+.practice-content {
+  display: flex;
+
   align-items: center;
-  gap: 0.3rem;
-  color: var(--primary-dark);
-  background: var(--primary-soft);
-  padding: 0.15rem 0.5rem;
-  border-radius: 6px;
+
+  gap: 0.9rem;
+
+  background: var(--surface);
+
+  border-radius: calc(var(--radius-md) - 1px);
+
+  padding: 0.85rem 1.1rem;
+}
+
+/* ---------- Lightning Icon ---------- */
+
+.practice-icon {
+  flex-shrink: 0;
+
+  width: 2.25rem;
+  height: 2.25rem;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-soft),
+    var(--accent-soft)
+  );
+
+  font-size: 1.15rem;
+
+  animation: practice-pulse 2s ease-in-out infinite;
+}
+
+/* ---------- Practice Text ---------- */
+
+.practice-text {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 0.45rem;
+
+  min-width: 0;
+
+  flex: 1;
+}
+
+.practice-label {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 0.9rem;
+
   font-weight: 700;
-  border-bottom: none;
+
+  color: var(--ink);
+
+  white-space: nowrap;
+}
+
+.practice-description {
+  color: var(--ink-soft);
+
+  font-size: 0.88rem;
+}
+
+/* ---------- Exercism Link ---------- */
+
+.exercism-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.15rem;
+
+  color: var(--primary-dark);
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  padding: 0.15rem 0.5rem;
+
+  margin-left: 0.15rem;
+
+  border-radius: 6px;
+
+  background: var(--primary-soft);
+
   transition:
     background var(--transition),
     color var(--transition),
-    transform var(--transition);
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
-.instructions .reference-link::after {
-  content: "↗";
-  font-size: 0.8rem;
-  opacity: 0.75;
-}
-
-.instructions .reference-link:hover {
-  background: var(--primary);
+.exercism-link:hover {
   color: #fff;
-  border-bottom: none;
+
+  background: var(--primary);
+
   transform: translateY(-1px);
+
+  box-shadow: 0 5px 12px rgba(91, 77, 255, 0.25);
 }
 
-/* Copy button (used both in instructions text and generated questions) */
+.external-icon {
+  font-size: 0.8rem;
+
+  line-height: 1;
+}
+
+/* ---------- Explore Button ---------- */
+
+.practice-badge {
+  flex-shrink: 0;
+
+  padding: 0.3rem 0.7rem;
+
+  border-radius: 999px;
+
+  background: var(--accent-soft);
+
+  color: #c94e32;
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+
+  text-decoration: none;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.practice-badge:hover {
+  background: var(--accent);
+
+  color: #fff;
+
+  transform: translateX(2px);
+
+  box-shadow: 0 6px 14px rgba(255, 122, 89, 0.25);
+}
+
+/* ---------- Exercism Animations ---------- */
+
+@keyframes practice-border {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes practice-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* ---------- Copy Button ---------- */
 
 .copy-btn {
   background: var(--primary-soft);
+
   border: 1px solid transparent;
+
   cursor: pointer;
+
   color: var(--primary);
+
   font-size: 1rem;
+
   line-height: 1;
+
   padding: 0.35rem 0.5rem;
+
   border-radius: 8px;
+
   margin-left: 0.25rem;
+
   transition:
     transform var(--transition),
     background var(--transition),
     border-color var(--transition);
+
   user-select: none;
+
   vertical-align: middle;
 }
 
 .copy-btn:hover {
   background: var(--primary);
+
   color: #fff;
+
   transform: translateY(-1px);
 }
 
@@ -368,93 +630,132 @@ h2 {
   transform: translateY(0) scale(0.96);
 }
 
-/* Flashing badge */
+/* ---------- Flashing Badge ---------- */
 
 #flash {
   display: inline-block;
+
   padding: 3px 10px;
+
   border-radius: 999px;
+
   font-weight: 700;
+
   font-size: 0.65rem;
+
   letter-spacing: 0.04em;
+
   margin-left: 10px;
+
   vertical-align: middle;
+
   animation: flashy-blink 1.1s ease-in-out infinite alternate;
+
   color: #7a1500;
+
   background-color: #ffd166;
+
   box-shadow: 0 0 0 rgba(255, 122, 89, 0);
+
   transition: all 0.1s ease;
 }
 
 @keyframes flashy-blink {
   0% {
     background-color: #ffd166;
+
     color: #7a1500;
+
     box-shadow: 0 0 8px rgba(255, 209, 102, 0.7);
+
     transform: scale(1);
   }
 
   100% {
     background-color: var(--accent);
+
     color: #fff;
+
     box-shadow: 0 0 10px rgba(255, 122, 89, 0.7);
+
     transform: scale(1.06);
   }
 }
 
 #flash:hover {
   animation-play-state: paused;
+
   transform: scale(1.08);
 }
 
-/* ---------- Question feed ---------- */
+/* ---------- Question Feed ---------- */
 
 .question-container {
   display: flex;
+
   flex-direction: column;
+
   gap: 1.75rem;
 }
 
 .day-block {
   background: var(--surface);
+
   border: 1px solid var(--border);
+
   border-radius: var(--radius-lg);
+
   box-shadow: var(--shadow-sm);
+
   padding: 1.75rem;
+
   transition:
     box-shadow var(--transition),
     transform var(--transition),
     border-color var(--transition);
+
   will-change: transform;
 }
 
 .day-block:hover {
   box-shadow: var(--shadow-md);
+
   transform: translateY(-3px);
+
   border-color: #d8dcf7;
 }
 
-/* Today's block (always rendered first) gets a special highlight */
+/* ---------- Today's Block ---------- */
 
 .question-container > .day-block:first-of-type {
   border: 1px solid rgba(91, 77, 255, 0.35);
+
   background: linear-gradient(
     180deg,
     var(--primary-soft) 0%,
     var(--surface) 140px
   );
+
   box-shadow: var(--shadow-lg);
 }
 
 .day-title {
   font-family: "Space Grotesk", sans-serif;
+
   font-weight: 700;
+
   font-size: 1.2rem;
+
   margin-bottom: 1.25rem;
+
   color: var(--primary-dark);
+
   user-select: none;
+
   display: flex;
+
   align-items: center;
+
   gap: 0.5rem;
 }
 
@@ -464,20 +765,29 @@ h2 {
 
 .question-container > .day-block:first-of-type .day-title::after {
   content: "Today";
+
   font-size: 0.65rem;
+
   font-weight: 700;
+
   letter-spacing: 0.05em;
+
   text-transform: uppercase;
+
   background: var(--primary);
+
   color: #fff;
+
   padding: 0.2rem 0.6rem;
+
   border-radius: 999px;
 }
 
-/* Questions render in a responsive grid inside each day block */
+/* ---------- Day Block Layout ---------- */
 
 .day-block {
   display: flex;
+
   flex-direction: column;
 }
 
@@ -488,23 +798,32 @@ h2 {
 @media (min-width: 820px) {
   .day-block:has(.question ~ .question) {
     display: grid;
+
     grid-template-columns: 1fr;
   }
 }
 
-/* Question card */
+/* ---------- Question Card ---------- */
 
 .question {
   border-radius: var(--radius-md);
+
   padding: 1.35rem 1.5rem;
+
   margin-bottom: 1.1rem;
+
   box-shadow: var(--shadow-sm);
+
   transition:
     box-shadow var(--transition),
     transform var(--transition);
+
   cursor: default;
+
   will-change: transform;
+
   border: 1px solid rgba(23, 26, 43, 0.05);
+
   position: relative;
 }
 
@@ -514,6 +833,7 @@ h2 {
 
 .question:hover {
   box-shadow: 0 14px 30px rgba(91, 77, 255, 0.18);
+
   transform: translateY(-4px);
 }
 
@@ -523,16 +843,27 @@ h2 {
 
 .question.current::before {
   content: "In progress";
+
   position: absolute;
+
   top: 1rem;
+
   right: 1.1rem;
+
   font-size: 0.65rem;
+
   font-weight: 700;
+
   letter-spacing: 0.04em;
+
   text-transform: uppercase;
+
   color: var(--primary-dark);
+
   background: rgba(255, 255, 255, 0.7);
+
   padding: 0.2rem 0.55rem;
+
   border-radius: 999px;
 }
 
@@ -542,62 +873,96 @@ h2 {
 
 .question > div:first-child {
   display: flex;
+
   align-items: center;
+
   gap: 10px;
+
   position: relative;
+
   margin-bottom: 0.75rem;
+
   font-family: "Space Grotesk", sans-serif;
+
   font-weight: 600;
+
   font-size: 0.98rem;
+
   color: var(--ink);
 }
 
 .section-icon {
   font-size: 1.15rem;
+
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   width: 2rem;
+
   height: 2rem;
+
   border-radius: 9px;
+
   background: rgba(255, 255, 255, 0.6);
+
   box-shadow: inset 0 0 0 1px rgba(23, 26, 43, 0.06);
 }
 
 .question p,
 .question pre {
   margin: 0.4rem 0 1rem;
+
   color: var(--ink);
+
   font-size: 0.98rem;
+
   line-height: 1.55;
+
   font-family: "Inter", sans-serif;
 }
 
-/* Test cases */
+/* ---------- Test Cases ---------- */
 
 .testcases {
   border-top: 1px dashed rgba(23, 26, 43, 0.12);
+
   padding-top: 12px;
+
   margin-top: 10px;
+
   font-size: 0.9rem;
+
   color: var(--ink-soft);
 }
 
 .testcases summary {
   font-weight: 600;
+
   cursor: pointer;
+
   outline-offset: 2px;
+
   user-select: none;
+
   color: var(--primary-dark);
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 0.4rem;
 }
 
 .testcases summary::before {
   content: "▶";
+
   font-size: 0.6rem;
+
   transition: transform 0.2s ease;
+
   display: inline-block;
 }
 
@@ -607,42 +972,69 @@ h2 {
 
 .testcase {
   margin-top: 0.85rem;
+
   padding: 0.75rem 0.9rem;
+
   background: rgba(255, 255, 255, 0.55);
+
   border-radius: 10px;
 }
 
 .testcase b {
   color: var(--ink);
+
   font-size: 0.82rem;
+
   text-transform: uppercase;
+
   letter-spacing: 0.03em;
 }
 
 .testcase pre {
   background: #171a2b;
+
   color: #eef0ff;
+
   border-radius: 8px;
+
   padding: 8px 12px;
+
   overflow-x: auto;
+
   margin: 0.35rem 0 0.75rem !important;
+
   font-family: "JetBrains Mono", "Fira Code", monospace;
+
   font-size: 0.82rem;
 }
 
+/* ---------- Video Link ---------- */
+
 .video-link {
   display: inline-flex;
+
   align-items: center;
+
   gap: 0.4rem;
+
   margin-top: 0.7rem;
+
   color: #fff;
+
   background: var(--accent);
+
   font-weight: 600;
+
   font-size: 0.88rem;
+
   text-decoration: none;
+
   padding: 0.45rem 0.9rem;
+
   border-radius: 999px;
+
   box-shadow: var(--shadow-sm);
+
   transition:
     transform var(--transition),
     box-shadow var(--transition);
@@ -650,38 +1042,55 @@ h2 {
 
 .video-link::before {
   content: "▶";
+
   font-size: 0.65rem;
 }
 
 .video-link:hover {
   transform: translateY(-2px);
+
   box-shadow: 0 10px 22px rgba(255, 122, 89, 0.35);
 }
 
+/* ---------- Notes ---------- */
+
 .notes {
   margin-top: 0.9rem;
+
   font-size: 0.9rem;
+
   color: var(--ink-soft);
+
   background: rgba(255, 255, 255, 0.6);
+
   border-left: 4px solid var(--primary);
+
   padding: 0.75rem 1rem;
+
   border-radius: 8px;
+
   font-style: italic;
 }
 
 .notes img {
   border-radius: var(--radius-sm);
+
   max-width: 100%;
+
   display: block;
+
   margin-top: 0.5rem;
+
   font-style: normal;
 }
 
-/* ---------- Scroll reveal ---------- */
+/* ---------- Scroll Reveal ---------- */
 
 .scroll-reveal {
   opacity: 0;
+
   transform: translateY(24px);
+
   transition:
     opacity 0.6s ease,
     transform 0.6s ease;
@@ -689,6 +1098,7 @@ h2 {
 
 .scroll-reveal.visible {
   opacity: 1;
+
   transform: translateY(0);
 }
 
@@ -697,12 +1107,15 @@ h2 {
 @media (max-width: 720px) {
   .header-container {
     flex-direction: column;
+
     align-items: flex-start;
+
     padding: 2rem 1.5rem;
   }
 
   .upes-logo {
     align-self: flex-start;
+
     height: 68px;
   }
 
@@ -712,6 +1125,32 @@ h2 {
 
   .day-block {
     padding: 1.35rem;
+  }
+
+  /* Exercism */
+
+  .practice-content {
+    align-items: flex-start;
+
+    padding: 0.8rem 0.9rem;
+  }
+
+  .practice-text {
+    display: block;
+  }
+
+  .practice-label {
+    display: block;
+
+    margin-bottom: 0.15rem;
+  }
+
+  .practice-description {
+    font-size: 0.82rem;
+  }
+
+  .practice-badge {
+    display: none;
   }
 }
 
