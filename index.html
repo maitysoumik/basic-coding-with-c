@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>100 Days of Code — UPES</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,50 +16,11 @@
     <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
 
     <main class="container">
-
-      <!-- ==================== NAVBAR ==================== -->
-
-      <nav class="navbar" aria-label="Main navigation">
-        <div class="nav-brand">
-          <span class="nav-brand-dot"></span>
-          <span>100 Days of Code</span>
-        </div>
-
-        <div class="nav-links">
-          <a href="#question-container" class="nav-link">
-            Daily Challenges
-          </a>
-
-          <a
-            href="https://exercism.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="nav-link nav-link--exercism"
-          >
-            <span class="exercism-spark">✦</span>
-
-            <span class="exercism-name">
-              Exercism
-            </span>
-
-            <span class="exercism-badge">
-              Practice
-            </span>
-
-            <span class="external-icon">↗</span>
-          </a>
-        </div>
-      </nav>
-
-      <!-- ==================== HEADER ==================== -->
-
       <header>
+        <!-- ================= BANNER ================= -->
+
         <div class="header-container">
-          <img
-            src="upes-logo.jpeg"
-            alt="UPES Logo"
-            class="upes-logo"
-          />
+          <img src="upes-logo.jpeg" alt="UPES Logo" class="upes-logo" />
 
           <div class="brand">
             <p class="eyebrow">100 Days of Code</p>
@@ -78,21 +38,45 @@
           </div>
         </div>
 
-        <!-- ==================== STUDENT INSTRUCTIONS ==================== -->
+        <!-- ================= EXERCISM REFERENCE ================= -->
+
+        <section class="exercism-reference">
+          <div class="exercism-reference-left">
+            <span class="exercism-reference-icon">✦</span>
+
+            <div>
+              <span class="exercism-reference-title">
+                Want more coding practice?
+              </span>
+
+              <span class="exercism-reference-text">
+                Try <strong>Exercism</strong> for language-based coding
+                exercises and practice.
+              </span>
+            </div>
+          </div>
+
+          <a
+            href="https://exercism.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="exercism-reference-link"
+          >
+            <span>Explore Exercism</span>
+            <span class="exercism-arrow">↗</span>
+          </a>
+        </section>
+
+        <!-- ================= STUDENT INSTRUCTIONS ================= -->
 
         <section class="instructions">
           <details>
-            <summary>
-              <h2>📝 Student Instructions</h2>
-            </summary>
+            <summary><h2>📝 Student Instructions</h2></summary>
 
             <ol>
               <li>
                 Copy the question statement by clicking the
-                <button
-                  aria-label="Copy Question Statement"
-                  class="copy-btn"
-                >
+                <button aria-label="Copy Question Statement" class="copy-btn">
                   📋
                 </button>
                 icon next to the question.
@@ -108,8 +92,7 @@
 
               <li>
                 Run your code on the provided
-                <strong>Sample Test Cases</strong>
-                and verify the output.
+                <strong>Sample Test Cases</strong> and verify the output.
               </li>
 
               <li>
@@ -124,12 +107,9 @@
           </details>
         </section>
 
-        <!-- ==================== QUESTIONS ==================== -->
+        <!-- ================= QUESTIONS ================= -->
 
-        <section
-          id="question-container"
-          class="question-container"
-        >
+        <section id="question-container" class="question-container">
           <!-- Questions will be dynamically loaded here -->
         </section>
       </header>
