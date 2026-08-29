@@ -71,7 +71,11 @@ body {
   height: 520px;
   top: -220px;
   right: -160px;
-  background: radial-gradient(circle, rgba(91, 77, 255, 0.35), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(91, 77, 255, 0.35),
+    transparent 70%
+  );
 }
 
 .bg-glow--two {
@@ -90,13 +94,16 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #cfd2ea;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
@@ -119,12 +126,18 @@ h2 {
 }
 
 /* ---------- Header / hero ---------- */
+
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  background: linear-gradient(135deg, #211a5e 0%, #4235e0 55%, #6f5bff 100%);
+  background: linear-gradient(
+    135deg,
+    #211a5e 0%,
+    #4235e0 55%,
+    #6f5bff 100%
+  );
   border-radius: var(--radius-lg);
   padding: 2.5rem 2.75rem;
   box-shadow: var(--shadow-lg);
@@ -211,6 +224,7 @@ h2 {
 }
 
 /* ---------- Instructions ---------- */
+
 .instructions details {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -247,6 +261,7 @@ h2 {
 .instructions summary::-webkit-details-marker {
   display: none;
 }
+
 .instructions summary::marker {
   content: "";
 }
@@ -288,7 +303,43 @@ h2 {
   border-color: var(--primary);
 }
 
+/* ---------- Exercism Reference ---------- */
+
+.instructions .reference-item {
+  margin-top: 1rem;
+}
+
+.instructions .reference-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  border-bottom: none;
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.instructions .reference-link::after {
+  content: "↗";
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+.instructions .reference-link:hover {
+  background: var(--primary);
+  color: #fff;
+  border-bottom: none;
+  transform: translateY(-1px);
+}
+
 /* Copy button (used both in instructions text and generated questions) */
+
 .copy-btn {
   background: var(--primary-soft);
   border: 1px solid transparent;
@@ -318,6 +369,7 @@ h2 {
 }
 
 /* Flashing badge */
+
 #flash {
   display: inline-block;
   padding: 3px 10px;
@@ -341,6 +393,7 @@ h2 {
     box-shadow: 0 0 8px rgba(255, 209, 102, 0.7);
     transform: scale(1);
   }
+
   100% {
     background-color: var(--accent);
     color: #fff;
@@ -355,6 +408,7 @@ h2 {
 }
 
 /* ---------- Question feed ---------- */
+
 .question-container {
   display: flex;
   flex-direction: column;
@@ -381,6 +435,7 @@ h2 {
 }
 
 /* Today's block (always rendered first) gets a special highlight */
+
 .question-container > .day-block:first-of-type {
   border: 1px solid rgba(91, 77, 255, 0.35);
   background: linear-gradient(
@@ -420,6 +475,7 @@ h2 {
 }
 
 /* Questions render in a responsive grid inside each day block */
+
 .day-block {
   display: flex;
   flex-direction: column;
@@ -437,6 +493,7 @@ h2 {
 }
 
 /* Question card */
+
 .question {
   border-radius: var(--radius-md);
   padding: 1.35rem 1.5rem;
@@ -517,6 +574,7 @@ h2 {
 }
 
 /* Test cases */
+
 .testcases {
   border-top: 1px dashed rgba(23, 26, 43, 0.12);
   padding-top: 12px;
@@ -620,6 +678,7 @@ h2 {
 }
 
 /* ---------- Scroll reveal ---------- */
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -634,6 +693,7 @@ h2 {
 }
 
 /* ---------- Responsive ---------- */
+
 @media (max-width: 720px) {
   .header-container {
     flex-direction: column;
