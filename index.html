@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>100 Days of Code — UPES</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +18,8 @@
 
     <main class="container">
       <header>
+        <!-- ---------- Hero Header ---------- -->
+
         <div class="header-container">
           <img
             src="upes-logo.jpeg"
@@ -39,6 +42,8 @@
             </p>
           </div>
         </div>
+
+        <!-- ---------- Student Instructions ---------- -->
 
         <section class="instructions">
           <details>
@@ -80,22 +85,55 @@
               <li>
                 Your GitHub account will be checked on a weekly basis.
               </li>
+            </ol>
+          </details>
+        </section>
 
-              <li class="reference-item">
-                For additional coding practice, you may use
+        <!-- ---------- Exercism Reference ---------- -->
+
+        <section
+          class="practice-reference"
+          aria-label="Additional coding practice"
+        >
+          <div class="practice-content">
+
+            <div class="practice-icon" aria-hidden="true">
+              ⚡
+            </div>
+
+            <div class="practice-text">
+              <span class="practice-label">
+                Want more practice?
+              </span>
+
+              <span class="practice-description">
+                Try additional coding exercises on
+
                 <a
                   href="https://exercism.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="reference-link"
+                  class="exercism-link"
                 >
                   Exercism
+                  <span class="external-icon">↗</span>
                 </a>
-                to practise programming exercises in your chosen language.
-              </li>
-            </ol>
-          </details>
+              </span>
+            </div>
+
+            <a
+              href="https://exercism.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="practice-badge"
+            >
+              Explore →
+            </a>
+
+          </div>
         </section>
+
+        <!-- ---------- Daily Questions ---------- -->
 
         <section
           id="question-container"
